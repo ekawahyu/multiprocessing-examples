@@ -14,6 +14,7 @@ def start_deposit():
 def stop_deposit():
     p2.terminate()
 
+# This start 10 processes when this module is imported
 for i in range(10):
     p2 = multiprocessing.Process(target=deposit, args=(balance,lock))
     start_deposit()

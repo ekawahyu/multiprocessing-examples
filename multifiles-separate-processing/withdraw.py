@@ -14,6 +14,7 @@ def start_withdraw():
 def stop_withdraw():
     p1.terminate()
 
+# This start 10 processes when this module is imported
 for i in range(10):
     p1 = multiprocessing.Process(target=withdraw, args=(balance,lock))
     start_withdraw()
